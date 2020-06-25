@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
     resources :users
     resources :mushrooms
+    get '/image', to: 'mushrooms#show'
     resources :comments
     resources :likes
     resources :health_benefits
