@@ -2,7 +2,7 @@ class Api::V1::MushHealthBenefitsController < ApplicationController
     
     def index
         mush_health_benefits = MushHealthBenefit.all 
-        render json: mush_health_benefits
+        render json: mush_health_benefits, include: [:mushroom, :health_benefit]
     end
 
     def show

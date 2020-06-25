@@ -8,14 +8,16 @@ class Api::V1::MushroomsController < ApplicationController
             end
     
             def show
-                mushroom = Mushroom.find(params[:id])   
-                image = rails_blob_path(mushroom.image)
+                mushroom = Mushroom.find(params[:id]) 
+                render json: mushroom.as_json.merge({ image: url_for(mushroom.image) })
+  
+                # image = rails_blob_path(mushroom.image)
 
-                if mushroom.id == params[:id]
-                    render json: { mushroom: mushroom, image: image } 
-                else 
-                    render json: mushroom
-                end 
+                # if mushroom.id == params[:id]
+                #     render json: { mushroom: mushroom, image: image } 
+                # else 
+                #     render json: mushroom
+                # end 
             end
       
     end
