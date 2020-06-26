@@ -7,6 +7,10 @@ class Mushroom < ApplicationRecord
     has_one_attached :image
     
 
+    def image_url
+        Rails.application.routes.url_helpers.rails_blob_path(self.image, only_path:true)
+    end
+
     # def as_json(*)
     #     super.except("created_at", "updated_at").tap do |hash|
     #       hash["image"] = url_for(hash.image)
