@@ -2,15 +2,7 @@ class Api::V1::HealthBenefitsController < ApplicationController
     
     def index 
         health_benefits = HealthBenefit.all 
-        render json: health_benefits.to_json, :include => {:mushrooms => {:only => [:id, :name, :scientific_name, :image, :location, :flavor], :methods => [:image_url]}}
-
-
-        # health_benefits = HealthBenefit.all 
-        # render json: health_benefits
-        
-        # .to_json(:include => 
-        # {:mushrooms => {:only => [:name, :scientific_name, :image, :location, :flavor]}}, except: [:created_at, :updated_at])
-  
+        render json: health_benefits.to_json, :include => {:mushrooms => {:only => [:id, :name, :scientific_name, :image, :location, :flavor], :methods => [:image_url]}}  
     end
 
     def show
