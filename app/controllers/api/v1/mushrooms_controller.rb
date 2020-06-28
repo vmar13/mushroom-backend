@@ -31,7 +31,10 @@ class Api::V1::MushroomsController < ApplicationController
                 render json: mushroom.as_json.merge({
                     #  image_url: mushroom.image_url, 
                     image: url_for(mushroom.image),
-                     health_benefits: (mushroom.health_benefits) 
+                     health_benefits: (mushroom.health_benefits),
+                     mush_health: (mushroom.mush_health_benefits),
+                     comments: (mushroom.comments)
+                    #  sources: (mush_health.sources) 
                     })
             end
       
