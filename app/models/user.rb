@@ -1,4 +1,6 @@
 class User < ApplicationRecord
-    has_many :likes
-    has_many :mushrooms, through: :likes
+    has_many :comments
+    has_many :mushrooms, through: :comments 
+    has_many :favorites
+    has_many :videos, through: :favorites
 end

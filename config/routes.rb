@@ -6,10 +6,11 @@ Rails.application.routes.draw do
     resources :users
     resources :mushrooms
     resources :comments
-    resources :likes
     resources :health_benefits
     resources :mush_health_benefits
     resources :sources
+    resources :favorites
+    resources :videos
     end 
   end 
 

@@ -173,16 +173,26 @@ Source.create(mush_health_benefit: shiitake_pg, citation: 'Ciric L, Tymon A, Zau
 Source.create(mush_health_benefit: shiitake_lrpc, citation: 'Shu Zhang et al. Mushroom consumption and incident risk of prostate cancer in Japan: A pooled analysis of the Miyagi Cohort Study and the Ohsaki Cohort Study. International Journal of Cancer, 2019.')
 Source.create(mush_health_benefit: shiitake_isb, citation: 'Dai Xiaoshuang et al. Consuming Lentinula Edodes (Shiitake) Mushrooms Daily Improves Human Immunity: A Randomized Dietary Intervention in Healthy Young Adults. Journal of the American College of Nutrition. 2015.')
 
+
+user1 = User.create(username: 'funguy85', password: 'fanatic')
+user1 = User.create(username: 'jambooey86', password: 'fanatic')
+user1 = User.create(username: 'mariela210', password: 'fanatic')
+user1 = User.create(username: 'albizu79', password: 'fanatic')
+user1 = User.create(username: 'collita55', password: 'fanatic')
+user1 = User.create(username: 'zenitram52', password: 'fanatic')
+user1 = User.create(username: 'johnsonKow', password: 'fanatic')
+user1 = User.create(username: 'nickEchevarria', password: 'fanatic')
+user1 = User.create(username: 'vani13', password: 'fanatic')
+user1 = User.create(username: 'willie863', password: 'fanatic')
+
+
 #Comments
-Comment.create(mushroom: reishi, content: "I've been brewing reishi tea for years. I swear by its medicinal effects!")
-Comment.create(mushroom: lions_mane, content: "I start every morning with a cup of Lion's Mane. It keeps me sharp!")
-Comment.create(mushroom: chaga, content: "It's easy to drink chaga tea instead of coffee. They taste similar.")
-Comment.create(mushroom: cordyceps, content: "One cup is all I need to power me up for a workout.")
-Comment.create(mushroom: turkey_tail, content: "My grandmother's homeopathic doctor recommended she start drinking this tea during cancer therapy, and it shrank her tumor. Amazing!")
-Comment.create(mushroom: maitake, content: "Keeps my blood pressure low. Highly recommend!")
-Comment.create(mushroom: shiitake, content: "Quick, easy way to lower your cholesterol. I don't mind the taste either.")
+Comment.create(user_id: User.all.sample.id, mushroom_id: Mushroom.all.find_by(name:"Reishi a.k.a. 'lingzhi'").id, content: "I've been brewing reishi tea for years. I swear by its medicinal effects!")
+Comment.create(user_id: User.all.sample.id, mushroom_id: Mushroom.all.find_by(name:"Lion's Mane").id, content: "I start every morning with a cup of Lion's Mane. It keeps me sharp!")
+Comment.create(user_id: User.all.sample.id, mushroom_id: Mushroom.all.find_by(name:"Chaga").id, content: "It's easy to drink chaga tea instead of coffee. They taste similar.")
+Comment.create(user_id: User.all.sample.id, mushroom_id: Mushroom.all.find_by(name:"Cordyceps a.k.a. 'Caterpillar Fungus'").id, content: "One cup is all I need to power me up for a workout.")
+Comment.create(user_id: User.all.sample.id, mushroom_id: Mushroom.all.find_by(name:"Turkey Tail").id, content: "My grandmother's homeopathic doctor recommended she start drinking this tea during cancer therapy. So far so good.")
+Comment.create(user_id: User.all.sample.id, mushroom_id: Mushroom.all.find_by(name:"Maitake a.k.a. 'Hen of the Woods'").id, content: "Keeps my blood pressure low. Highly recommend!")
+Comment.create(user_id: User.all.sample.id, mushroom_id: Mushroom.all.find_by(name:"Shiitake").id, content: "Quick, easy way to lower your cholesterol. I don't mind the taste either.")
 
-user1 = User.create(username: 'funguy85', password: 'reishiFanatic!!')
-
-Like.create(user: user1, mushroom: reishi, total: 0)
 

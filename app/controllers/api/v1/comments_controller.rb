@@ -2,12 +2,12 @@ class Api::V1::CommentsController < ApplicationController
     
             def index
                 comments = Comment.all 
-                render json: comments, include: [:mushroom]
+                render json: comments, include: [:mushroom, :user]
             end
     
             def show
                 comment = Comment.find(params[:id])   
-                render json: comment 
+                render json: comment, include: [:mushroom, :user] 
             end
     
             def new
@@ -28,6 +28,6 @@ class Api::V1::CommentsController < ApplicationController
             private
     
             def comment_params
-                params.require(:comment).permit(:mushroom_id, :content)
+                params.require(:comment).permit(:user_id, :mushroom_id, :content)
             end 
     end
