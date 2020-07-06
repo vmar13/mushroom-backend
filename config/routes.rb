@@ -9,8 +9,7 @@ Rails.application.routes.draw do
     resources :health_benefits
     resources :mush_health_benefits
     resources :sources
-    resources :favorites
-    resources :videos
+    resources :fav_videos
     end 
   end 
 
