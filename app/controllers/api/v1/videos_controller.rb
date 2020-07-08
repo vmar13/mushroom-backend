@@ -15,6 +15,11 @@ class Api::V1::VideosController < ApplicationController
         render json: video
     end 
 
+    def destroy
+        video = Video.find(params[:id])   
+        video.destroy
+    end 
+
    
 
     private
