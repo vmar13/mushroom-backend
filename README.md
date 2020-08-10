@@ -1,6 +1,6 @@
 # F in Tea
 
-F in Tea (or "Fungi in Tea") was designed to teach users about the medicinal benefits of mushroom teas. You can sign in, browse mushrooms by medicinal benefit, search for videos on YouTube on how to brew your own tea, and add them to your favorites. Watch the (https://youtu.be/l5ohSkA93hI "video demo").  
+F in Tea (or "Fungi in Tea") was designed to teach users about the medicinal benefits of mushroom teas. You can sign in, browse mushrooms by medicinal benefit, search for videos on YouTube on how to brew your own tea, and add them to your favorites. Watch the video demo: https://youtu.be/l5ohSkA93hI   
 
 **NOTE: This is the backend repository. You can view the frontend here:** https://github.com/vmar13/mushroom-frontend
 
