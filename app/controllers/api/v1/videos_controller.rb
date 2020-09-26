@@ -19,7 +19,6 @@ class Api::V1::VideosController < ApplicationController
         video = Video.find(params[:id])   
         video.destroy
     end 
-
    
 
     private

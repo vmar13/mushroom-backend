@@ -15,7 +15,7 @@ User.destroy_all
 Like.destroy_all
 
 
-##mushrooms
+##Mushrooms
 reishi = Mushroom.create(name: "Reishi a.k.a. 'lingzhi'", scientific_name: "Ganoderma lucidum", location: "Asia, southern Europe, and northeastern and southeastern United States", flavor: "bitter, earthy")
 reishi.image.attach(
     io: File.open('./public/images/reishi_perfect.png'),
@@ -65,7 +65,7 @@ maitake.image.attach(
     content_type: 'application/png'
 )
 
-##health benefits
+##Health Benefits
 immune_system_boost = HealthBenefit.create(name: 'immune system boost')
 cancer_fighting_effects = HealthBenefit.create(name: 'cancer-fighting effects')
 anti_viral_effects = HealthBenefit.create(name: 'anti-viral effects')
@@ -121,7 +121,7 @@ shiitake_lrpc = MushHealthBenefit.create(mushroom: shiitake, health_benefit: low
 shiitake_isb = MushHealthBenefit.create(mushroom: shiitake, health_benefit: immune_system_boost)
 
 
-##Source
+##Sources
 
 Source.create(mush_health_benefit: reishi_isb, citation: 'Lin Zhi-Bin. Cellular and Molecular Mechanisms of Immuno-Modulation by Ganoderma Lucidum. Journal of Pharmacological Sciences. 2005.')
 Source.create(mush_health_benefit: reishi_cfe, citation: 'Santesso N, Wieland LS. A summary of a cochrane review: Ganoderma lucidum (Reishi mushroom) for the treatment of cancer. Eur J Integr Med. 2016.')
@@ -173,7 +173,7 @@ Source.create(mush_health_benefit: shiitake_pg, citation: 'Ciric L, Tymon A, Zau
 Source.create(mush_health_benefit: shiitake_lrpc, citation: 'Shu Zhang et al. Mushroom consumption and incident risk of prostate cancer in Japan: A pooled analysis of the Miyagi Cohort Study and the Ohsaki Cohort Study. International Journal of Cancer, 2019.')
 Source.create(mush_health_benefit: shiitake_isb, citation: 'Dai Xiaoshuang et al. Consuming Lentinula Edodes (Shiitake) Mushrooms Daily Improves Human Immunity: A Randomized Dietary Intervention in Healthy Young Adults. Journal of the American College of Nutrition. 2015.')
 
-
+#Users
 user1 = User.create(username: 'funguy85', password: 'fanatic')
 user1 = User.create(username: 'jambooey86', password: 'fanatic')
 user1 = User.create(username: 'mariela210', password: 'fanatic')
