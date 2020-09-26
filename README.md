@@ -12,5 +12,9 @@ F in Tea (or "Fungi in Tea") was designed to teach users about the medicinal ben
 2. Run "bundle install" to install dependencies
 3. Run "rails db:seed" to seed the database
 4. Run "rails s" to start the server
+<<<<<<< HEAD
 5. Start the frontend using the link **above**
 
+=======
+5. Start the frontend using the link **above**
+>>>>>>> d29d36ab344fea8499bd779ebd80bcb970101fd0
