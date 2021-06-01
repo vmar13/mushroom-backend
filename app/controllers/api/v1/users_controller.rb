@@ -1,4 +1,5 @@
 class Api::V1::UsersController < ApplicationController
+    skip_before_action :authorized, only: [:create, :index, :show]
     
     def index
         users = User.all 
@@ -7,7 +8,11 @@ class Api::V1::UsersController < ApplicationController
 
     def show
         user = User.find(params[:id])   
-        render json: user, include: [:mushrooms] 
+        render json: user.as_json.merge({
+            mushrooms: (user.mushrooms),
+            comments: (user.comments),
+            favorites: (user.favorites)
+        })
     end
 
 
