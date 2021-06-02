@@ -1,4 +1,5 @@
 class Api::V1::HealthBenefitsController < ApplicationController
+    skip_before_action :authorized
     
     def index 
         health_benefits = HealthBenefit.all 

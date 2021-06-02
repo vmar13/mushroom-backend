@@ -1,4 +1,5 @@
 class Api::V1::VideosController < ApplicationController
+    skip_before_action :authorized
     
     def index
         videos = Video.all 

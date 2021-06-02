@@ -13,8 +13,7 @@ Rails.application.routes.draw do
     resources :mush_health_benefits
     resources :sources
     resources :favorites
-    resources :videos
-    end 
+      end 
   end 
 
 end

@@ -1,4 +1,5 @@
 class Api::V1::MushroomsController < ApplicationController
+    skip_before_action :authorized
     
             def index
                 mushrooms = Mushroom.all.with_attached_image
